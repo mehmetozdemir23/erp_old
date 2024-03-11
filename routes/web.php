@@ -45,6 +45,8 @@ Route::middleware('auth')->group(function () {
     })->name('overview');
 
     Route::group(['prefix' => 'products', 'as' => 'products.'], function () {
+        Route::get('export', [ProductController::class, 'export'])->name('export');
+
         Route::get('', [ProductController::class, 'index'])->name('index');
         Route::get('create', [ProductController::class, 'create'])->name('create');
         Route::post('', [ProductController::class, 'store'])->name('store');
@@ -53,8 +55,9 @@ Route::middleware('auth')->group(function () {
         Route::put('{product}', [ProductController::class, 'update'])->name('update');
         Route::get('{product}/delete', [ProductController::class, 'confirmDelete'])->name('confirm-delete');
         Route::delete('{products}', [ProductController::class, 'destroyMany'])->name('destroyMany');
+
     });
 
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

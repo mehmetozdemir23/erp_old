@@ -7,13 +7,19 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\Sale;
+use App\Services\ProductExportService;
 use App\Services\ProductService;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function __construct(public ProductService $productService)
+    public function __construct(public ProductService $productService, public ProductExportService $productExportService)
     {
+    }
+
+    public function export()
+    {
+        return $this->productExportService->exportToExcel('test-file');
     }
 
     public function index(Request $request)

@@ -35,7 +35,7 @@
                 </svg>
                 Add new product
                 </Link>
-                <button type="button"
+                <a :href="route('products.export')"
                     class="flex items-center justify-center flex-shrink-0 px-3 py-2 text-sm font-semibold text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200">
                     <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                         viewBox="0 0 24 24">
@@ -43,7 +43,7 @@
                             d="M8.71 7.71L11 5.41V15a1 1 0 0 0 2 0V5.41l2.29 2.3a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.42l-4-4a1 1 0 0 0-.33-.21a1 1 0 0 0-.76 0a1 1 0 0 0-.33.21l-4 4a1 1 0 1 0 1.42 1.42M21 14a1 1 0 0 0-1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4a1 1 0 0 0-2 0v4a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-4a1 1 0 0 0-1-1" />
                     </svg>
                     Export
-                </button>
+                </a>
             </div>
         </div>
         <div class="flex flex-col sm:flex-row justify-between items-center lg:space-x-2 space-x-0 pl-2 pr-4 py-3">
