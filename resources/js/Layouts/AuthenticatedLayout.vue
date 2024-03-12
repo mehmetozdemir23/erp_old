@@ -1,8 +1,8 @@
 <template>
     <div class="antialiased bg-gray-50">
         <Navbar @drawer-clicked="sidebarVisible = !sidebarVisible" />
-        <Sidebar :isVisible="sidebarVisible" />
-        <main class="p-4 lg:ml-48 h-auto pt-20">
+        <Sidebar :isVisible="sidebarVisible" @closed="sidebarVisible = false" />
+        <main class="p-4 lg:ml-60 h-auto pt-20">
             <slot />
         </main>
     </div>

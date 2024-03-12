@@ -61,7 +61,7 @@
                     class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2"
                     placeholder="Search products" required>
             </div>
-            <ul class="my-2 flex flex-col space-y-2 sm:flex-row w-full max-w-md sm:space-x-4 sm:space-y-0">
+            <ul class="my-2 pl-4 flex flex-col space-y-2 sm:flex-row w-full max-w-md sm:space-x-1.5 sm:space-y-0">
                 <li v-for="(options, column) in filters" :key="column" class="w-full">
                     <ProductFilter :options="options" :selectedFilter="selectedFilters[column]" :column="column"
                         @filter-changed="updateFilter(column, $event)" />
